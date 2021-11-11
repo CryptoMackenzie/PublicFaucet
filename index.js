@@ -50,7 +50,7 @@ let sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 async function contractProvider(privKey){
     const provider = new HDWalletProvider(privKey, "wss://speedy-nodes-nyc.moralis.io/7e9361d53693a6e439879bb5/polygon/mumbai/ws")
     const web3 = new Web3(provider)
-    const Store = await new web3.eth.Contract(abiObj, "0xa1173fC3F63D5ddE3b1F4fbB30671C20A32ACcB1")
+    const Store = await new web3.eth.Contract(abiObj, "0xc520504Ed63218AeCA00fe465ACd95c1B81b8920")
     return {web3,Store}
 }
 
